@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Open up the html tag and set the language to english-->
+<head>
+    <meta charset="UTF-8"> <!--Set the characterset-->
+    <title>Practice 1</title> <!--Title the page-->
+</head>
+<style>
+    /*This style section is the exact same as it was on index.html, see there for a detailed description of the rainbow text*/
+    .rainbowtext { 
+        animation: rainbow 2.5s linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}}
+</style>
+<body>
+    <h1 class="rainbowtext">Gage Weaver</h1> <!--H1 tag as my name for my portfolio-->
+    <img width=300px, height=300px, id="catphoto" src="https://thecatapi.com/api/images/get?format=src&type=jpg" alt="Picture of a Cat"> <!--This api will grab a random cat photo, refresh the page if it pops up no image (rare)-->
+    <br /> <!--Break for spacing-->
+    <h2 class="rainbowtext">My Contact Info</h2> <!--H2 for my contact info-->
+    <p class="rainbowtext">Email: Gage_Weaver@ku.edu</p> <!--Email-->
+    <p class="rainbowtext">Mailing Address: 123 Sesame Street</p> <!--Address-->
+    <a href="https://www.gage-weaver.com", class="rainbowtext">A Link To My Personal Website</h2> <!-- an a element with a link to my portfolio website-->
+    <br /> <!--Breaks for spacing-->
+    <br />
+    <br />
+    <br />
+    <!--Below is the embed for a youtube video link-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jNQXAC9IVRw?si=XLiuPx209cgAL2s4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</body>
+</html>

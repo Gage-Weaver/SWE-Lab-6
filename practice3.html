@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Open up the html tag and set language to english-->
+<head>
+    <meta charset="UTF-8"> <!--Set the characterset-->
+    <title>Practice 3</title> <!--Title the page-->
+</head>
+<style>
+    /*Below is the rainbowtext css that is described in index.html*/
+    .rainbowtext {
+        animation: rainbow 2.5s linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}}
+</style>
+<body>
+    <script>
+        function validatepasswords() { //Javascript function to validate the passwords
+            var password1 = document.getElementById("password1").value; //grab value of first password
+            var password2 = document.getElementById("password2").value; //grab value of second password
+
+
+            if (password1.length < 8) { //if the length of first is less than 8
+                alert("The length of the first password is less than 8 letters!")
+            } else if (password2.length < 8) { //if the length of second is less than 8
+                alert("The length of the second password is less than 8 letters!")
+            } else if (password1 != password2) { //if the passwords dont match
+                alert("Two passwords don't match!")
+            } else { //if nothing above is tripped they are good
+                alert("Everything is good!")
+        }
+    }
+    </script>
+    <h1 class="rainbowtext">EECS 348 Lab Seven Practice 3</h1> <!--H1 that titles the page-->
+    <!--Below the user will enter in the passwords and then have a button to submit them-->
+    Password 1:
+    <input id="password1" type="text" value="">
+    <br />
+    Password 2:
+    <input id="password2" type="text" value="">
+    <br />
+    <button onclick="validatepasswords()">Check Passwords</button>
+</body>
+</html>

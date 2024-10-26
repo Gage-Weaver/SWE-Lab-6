@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Open up an html tag with the language set to english-->
+<head>
+    <meta charset="UTF-8"> <!--Set the characterset-->
+    <title>Practice 2</title> <!--Make the page title practice2-->
+</head>
+<body>
+    <style>
+        #CustomColorText {border-style: solid; border-width: 5px} /*This is the styling for the custom color text that the user will be able to change by typing into the fields, below is the rainbow text that is again defined in the index.html page*/
+        .rainbowtext {
+        animation: rainbow 2.5s linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}}
+    </style>
+    <script>
+        function alert_paragraph_color() { //declare a javascript function for changing the paragraph color
+        var border_R = document.getElementById("border_R").value; //get the value of the red text box
+        var border_G = document.getElementById("border_G").value; //get the value of the green text box
+        var border_B = document.getElementById("border_B").value; //get the value of the blue text box
+        var border_width = document.getElementById("border_width").value; //get the value of the width text box
+        var bg_R = document.getElementById("bg_R").value; //get the value of the background red text box
+        var bg_G = document.getElementById("bg_G").value; //get the value of the background green text box
+        var bg_B = document.getElementById("bg_B").value; //get the value of the background blue text box
+    
+        var csstag = document.getElementById("CustomColorText"); //set a variable named csstag for getting the CustomColorText element 
+        csstag.style.borderColor = `rgb(${border_R},${border_G},${border_B})`; //change the tags border color to the combo entered by user
+        csstag.style.borderWidth = border_width + 'px'; //change the borderwidth to the value entered by the user
+        csstag.style.backgroundColor = `rgb(${bg_R},${bg_G},${bg_B})`; //change the background color to the one entered by the user
+    }
+    </script>
+    <h1 class="rainbowtext">EECS 348 Lab Seven Practice 2</h1> <!--Set an H1 element for the h1 of the page-->
+    <!--Below is a quote by Fred Hampton that the user will be able to change the color and border of-->
+    <div id="CustomColorText">"You have to understand that people have to pay the price for peace. If you dare to struggle, you dare to win. If you dare not struggle, then, God damn it, you don't deserve to win." -Fred Hampton</div>
+    <!--Below the user will be prompted to enter all the values as specified in the javascipt section above with a text input for each and no value by default-->
+    Border R(0-255): 
+    <input id="border_R" type="text" value="">
+    <br />
+    Border G(0-255):
+    <input id="border_G" type="text" value="">
+    <br />
+    Border B(0-255):
+    <input id="border_B" type="text" value="">
+    <br />
+    Border Width:
+    <input type="text" id="border_width" value="">
+    <br />
+    Background R(0-255):
+    <input type="text" id="bg_R" value="">
+    <br />
+    Background G(0-255):
+    <input type="text" id="bg_G" value="">
+    <br />
+    Background B(0-255):
+    <input type="text" id="bg_B" value="">
+    <br />
+    <button onclick="alert_paragraph_color()">Change the color!</button> <!--Have a button to submit all that was entered-->
+</body>
+</html>
